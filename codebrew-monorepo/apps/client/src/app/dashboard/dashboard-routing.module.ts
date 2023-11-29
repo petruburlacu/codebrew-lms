@@ -4,16 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
-  {
-    path: 'login',
-    loadComponent: () =>
-      import('./../nx-welcome.component').then(
-        (c) => c.NxWelcomeComponent
-      ),
-  },
+  // {
+  //   path: 'login',
+  //   loadComponent: () =>
+  //     import('./../nx-welcome.component').then(
+  //       (c) => c.NxWelcomeComponent
+  //     ),
+  // },
 ];
 
 @NgModule({
@@ -21,4 +21,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [] // Provide the service here
 })
-export class HomeRoutingModule {}
+export class DashboardRoutingModule {}
